@@ -7,12 +7,12 @@ switch (texto) {
 
     case 'crear':   //original: agregar
             let titulo = process.argv[3];
-            let estado = 'pendiente';
-            moduloTareas.agregarTarea(titulo,estado) 
+            let estado = process.argv[4];
+            moduloTareas.crearTarea(titulo,estado) 
         break;
     
     case 'listar':
-        listarTareas()
+        listarTareas() //solo quiero listar. No necesita parametro
         break;
 
     case 'filtrar':
